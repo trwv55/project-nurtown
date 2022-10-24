@@ -1,0 +1,168 @@
+@import "./normalize.scss";
+@import "./mixins";
+@import "./variables";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "TTHoves", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #333333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+//header
+
+.header {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 29px;
+    .header__logo {
+      img {
+      }
+    }
+    .header__links {
+      padding-right: 130px;
+      ul {
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+        .header__link {
+          color: $headersColor;
+        }
+        .active {
+          border-top: 1px solid $headersColor;
+          border-bottom: 1px solid $headersColor;
+          padding: 3px 0;
+        }
+      }
+    }
+  }
+}
+//page1
+.slider {
+  padding-top: 32px;
+  padding-bottom: 50px;
+  .slider-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    .slider__left {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 107px;
+      gap: 92px;
+      .slider__title {
+        display: flex;
+        flex-direction: column;
+
+        .project {
+          color: $greyText;
+          font-weight: 300;
+          font-size: 64px;
+          line-height: 64px;
+        }
+        .nurtown {
+          color: $headersColor;
+          font-weight: 700;
+          font-size: 64px;
+          line-height: 64px;
+          margin-top: -8px;
+        }
+      }
+      .slider__btns {
+        .btn-slider {
+          padding: 15px 14px 13px 14px;
+          background: #ffffff;
+          border: 1px solid #f2f2f2;
+          cursor: pointer;
+          transition: background 0.15s ease 0s;
+          &:active {
+            background: #f9f9f9;
+          }
+        }
+      }
+      .slider__counts {
+        margin-top: 2px;
+        color: $greyText;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 24px;
+        display: flex;
+        gap: 25px;
+      }
+    }
+  }
+  .slider__right {
+    background-image: url("../images/main.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 770px;
+    height: 829px;
+    position: relative;
+    ul {
+      .slide {
+        // background-image: url("../images/main.jpg");
+      }
+    }
+    .btn-link {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      @include btn-main;
+    }
+  }
+}
+
+//page2
+.company {
+  padding-bottom: 100px;
+  .company-container {
+    display: flex;
+    position: absolute;
+    background-color: #fbfbfb;
+    .company__images-lineOne {
+      position: relative;
+      top: 30;
+      left: 100;
+    }
+    .company__images-lineTwo {
+    }
+    .company-text {
+      width: 400px;
+    }
+  }
+}
