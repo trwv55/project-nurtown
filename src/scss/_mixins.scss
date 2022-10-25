@@ -20,3 +20,32 @@
     background-image: url("../images/btn-link.svg");
   }
 }
+
+@mixin btn-dark {
+  border: none;
+  height: 71px;
+  width: 222px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  background-color: #333333;
+  color: #fff;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 8px;
+    margin-left: 15px;
+    margin-top: 2px;
+    background-image: url("../images/projects/link.svg");
+  }
+}
+
+@mixin title {
+  font-weight: 300;
+  font-size: 64px;
+  line-height: 64px;
+  color: $greyText;
+}

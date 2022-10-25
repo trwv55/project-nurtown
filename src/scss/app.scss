@@ -74,7 +74,7 @@ h6 {
 //page1
 .slider {
   padding-top: 32px;
-  padding-bottom: 50px;
+  padding-bottom: 120px;
   .slider-container {
     display: flex;
     flex-direction: row;
@@ -149,20 +149,173 @@ h6 {
 
 //page2
 .company {
-  padding-bottom: 100px;
   .company-container {
     display: flex;
-    position: absolute;
+    gap: 30px;
     background-color: #fbfbfb;
     .company__images-lineOne {
       position: relative;
-      top: 30;
-      left: 100;
+      margin-left: 100px;
+      padding-top: 30px;
+      .outFrame {
+        position: absolute;
+        bottom: -56px;
+        left: 0;
+      }
     }
     .company__images-lineTwo {
+      img {
+        padding-top: 60px;
+      }
     }
     .company-text {
-      width: 400px;
+      margin-right: 70px;
+      h3 {
+        padding-top: 30px;
+        font-weight: 300;
+        font-size: 64px;
+        line-height: 64px;
+        color: $greyText;
+      }
+      .text {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 25px;
+        color: #000000;
+      }
+      .btn-company {
+        @include btn-main;
+      }
+    }
+  }
+}
+
+//page3 tasks
+.tasks {
+  padding-bottom: 122px;
+  .tasks-container {
+    h3 {
+      padding-top: 150px;
+      @include title;
+      color: $greyText;
+    }
+    .tasks__list {
+      display: flex;
+      margin-top: 62px;
+      .task-one {
+        display: flex;
+        align-items: center;
+        margin-right: 143px;
+        img {
+          max-width: 120px;
+          max-height: 140px;
+        }
+        .task-one--desc {
+          padding-left: 30px;
+          font-size: 22px;
+          line-height: 36px;
+          color: $headersColor;
+          flex-basis: 300px;
+
+          // width: 310px;
+        }
+      }
+      .task-two {
+        display: flex;
+        align-items: center;
+
+        img {
+          max-width: 120px;
+          max-height: 140px;
+        }
+        .task-two--desc {
+          padding-left: 30px;
+          font-size: 22px;
+          line-height: 36px;
+          color: $headersColor;
+        }
+      }
+    }
+  }
+}
+
+//page4 projects
+.projects {
+  padding-bottom: 220px;
+  .projects-container {
+    h3 {
+      @include title;
+      padding-bottom: 60px;
+    }
+    .projects__images {
+      display: flex;
+      flex-direction: column;
+      .images-lineOne {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 30px;
+        .main-image {
+          position: relative;
+          .overlay {
+            &:after {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background: rgba(0, 0, 0, 0.8);
+              z-index: 2;
+            }
+          }
+          .image-title {
+            position: absolute;
+            top: 48px;
+            left: 79px;
+            z-index: 3;
+            color: #ffffff;
+            h4 {
+              font-weight: 700;
+              font-size: 64px;
+              line-height: 64px;
+              text-transform: uppercase;
+              margin-bottom: 14px;
+            }
+            .projects__link {
+              font-size: 12px;
+              line-height: 12px;
+              letter-spacing: 0.2em;
+              text-transform: uppercase;
+              &:after {
+                content: "";
+                position: absolute;
+                width: 17px;
+                height: 8px;
+                margin-left: 15px;
+                margin-top: 5px;
+                background-image: url("../images/projects/link.svg");
+              }
+            }
+          }
+        }
+      }
+      .images-lineTwo {
+        display: flex;
+        gap: 30px;
+      }
+    }
+    .projects__btn {
+      @include btn-dark;
+      float: right;
+      margin-top: 30px;
+    }
+  }
+}
+
+//page5 connect
+.connect {
+  .connect-container {
+    h3 {
     }
   }
 }
