@@ -9,7 +9,11 @@
   line-height: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  transition: background 0.15s ease 0s;
   cursor: pointer;
+  &:hover {
+    background: #f9f9f9;
+  }
   &:after {
     content: "";
     position: absolute;
@@ -31,14 +35,16 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   background-color: #333333;
+  position: relative;
   color: #fff;
+  cursor: pointer;
   &:after {
     content: "";
     position: absolute;
     width: 17px;
     height: 8px;
-    margin-left: 15px;
-    margin-top: 2px;
+    margin-left: 100px;
+    margin-bottom: 2px;
     background-image: url("../images/projects/link.svg");
   }
 }
