@@ -155,7 +155,9 @@ input::-webkit-inner-spin-button {
     width: 770px;
     height: 829px;
     position: relative;
-    ul {
+    .slides-container {
+      overflow: scroll;
+      scroll-behavior: smooth;
       .slide {
         // background-image: url("../images/main.jpg");
       }

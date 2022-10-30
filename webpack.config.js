@@ -37,6 +37,11 @@ module.exports = {
       //   ],
       // },
       {
+        test: /\.(js)$/,
+        exclude: /node_modules/,
+        use: ["babel-loader"],
+      },
+      {
         test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
         type: "asset/inline",
       },
