@@ -20,22 +20,6 @@ module.exports = {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
         type: "asset/resource",
       },
-      // {
-      //   test: /\.(png|svg|jpg|gif)$/,
-      //   use: ["file-loader"],
-      //   options: {
-      //     name: "images/[name].[ext]",
-      //   },
-      // },
-      // },
-      // {
-      //   test: /\.html$/,
-      //   use: [
-      //     {
-      //       loader: "html-loader",
-      //     },
-      //   ],
-      // },
       {
         test: /\.(js)$/,
         exclude: /node_modules/,
